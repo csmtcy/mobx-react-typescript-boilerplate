@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Boilerplate for MobX + React project with Typescript, ES6 compilation and hot code reloading",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,9 @@
     "@types/react-dom": "^16.8.4",
     "@types/webpack-env": "^1.13.9",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-import": "^1.12.0",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^5.2.0",
     "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
@@ -51,6 +53,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "@types/react": "^16.8.21",
     "@types/react-router-dom": "^4.3.4",
+    "antd-mobile": "^2.2.14",
     "babel-loader": "^8.0.0",
     "css-loader": "^3.0.0",
     "mobx": "^5.5.2",
