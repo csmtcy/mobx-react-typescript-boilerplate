@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import {observable} from 'mobx';
 import {observer} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
+require("./theme/main.scss"); // only require this when development mode 
 
 class AppState {
     @observable timer = 0;

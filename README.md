@@ -1,41 +1,24 @@
-  
-
 # React-TypeScript
-
-  
 
 Minimal boilerplate for a single-page app using MobX, React and TypeScript with TSX.
 
-  
 
 Initial run:
 
-  
+* Install Node.js / Yarn
 
-* Install Node.js
-
-* `npm install`  
-* `npm start`
-* `npm run dev`
-* `npm run watch`
-* `npm run build`
+* `yarn run dev`  // for development live reload + hot reload and served from http://localhost:3000
+* `yarn run build` // for production build
 
 **TODO List**
 
-  
-
  - ~~Added babel~~
-
- - I18n support
-
+ - ~~create production and development environment~~
  - ~~Hot module reload~~
-
- - Sass
-
+ - ~~Sass~~
+ - I18n support
  - Better directory structure
-
- - WeUI as basic UI template
-
+ - https://ant.design/docs/react/introduce as basic UI template 
  - .env or global config file
-
  - add local storage
+ - remove Devtools from production
