@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'source-map',
   mode: 'development',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
@@ -17,10 +17,25 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx']
   },
   module: {
-    rules: [{
-      test: /\.tsx?$/,
-      loader: "awesome-typescript-loader",
-      include: path.join(__dirname, 'src')
-    }]
-  }
+    rules: [
+      // {
+      //   test: /\.tsx?$/,
+      //   loader: "awesome-typescript-loader",
+      //   include: path.join(__dirname, 'src')
+      // },
+      {
+        test: /\.tsx$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.tsx$/,
+        use: ["source-map-loader"],
+        enforce: "pre"
+      },
+    ]
+  },
+  stats: {
+    colors: true
+  },
 };
