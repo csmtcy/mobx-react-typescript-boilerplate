@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobxjs/mobx-react-typescript-boilerplate.git"
+    "url": "https://github.com/csmtcy/mobx-react-typescript-boilerplate.git"
   },
   "keywords": [
     "react",
@@ -16,7 +16,7 @@
     "mobx",
     "starter-kit"
   ],
-  "author": "Michel Weststrate <mweststrate@gmail.com> (http://github.com/mweststrate)",
+  "author": "Mark Tan <mtcy.9012@gmail.com@gmail.com> (http://github.com/csmtcy)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mobxjs/mobx/issues"
