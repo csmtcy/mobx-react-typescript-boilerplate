@@ -1,6 +1,6 @@
-# React-TypeScript
+# React-Mobx-TypeScript
 
-Boilerplate for a single-page app using React + Typescript + Mobx
+Boilerplate for SPA (React + Typescript + Mobx + React Router + Sass + i18n)
 
 
 Initial run:
