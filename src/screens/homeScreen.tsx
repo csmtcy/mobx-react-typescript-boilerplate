@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useTranslation, Trans, withTranslation, WithTranslation } from "react-i18next";
+import { test } from './../services'
 
 // function component apply i18n method
 // const HomeScreen = () => {
@@ -11,6 +12,12 @@ import { useTranslation, Trans, withTranslation, WithTranslation } from "react-i
 
 // class component apply i18n method
 class HomeScreen extends React.Component<WithTranslation> {
+
+    componentDidMount() {
+        test().then((result) => {
+            console.log(result);
+        });
+    }
 
     render() {
         const { t, tReady } = this.props;

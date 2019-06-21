@@ -1,10 +1,12 @@
 var path = require('path');
+require("@babel/polyfill");
 
 module.exports = {
-  entry: {
-    main: './src/index',
-    // vendor: "./src/vendor.js"
-  },
+  // entry: {
+  //   main: './src/index',
+  //   // vendor: "./src/vendor.js"
+  // },
+  entry: ["@babel/polyfill", "./src/index"],
   resolve: {
     extensions: ['.js', '.ts', '.tsx']
   },

@@ -19,11 +19,14 @@ Initial run:
 - ~~add mobx-state-tree~~
 - ~~add react-router~~
 - ~~Better directory structure~~
-- ~~https://ant.design/docs/react/introduce as basic UI template ~~
-- ~I18n support~
-- add local storage
+- ~~https://ant.design/docs/react/introduce as basic UI template~~
+- ~~I18n support~~
+- ~~add local storage~~ // refer to ignite
+- API request using axios maybe
+- local storage encryption (optional)
+- error message handling 
 - Loading screen 
-- Loading icon for certain area usage
+- Loading icon for certain area usage (https://github.com/danilowoz/react-content-loader)
 - keep logged in data
 - add example
 

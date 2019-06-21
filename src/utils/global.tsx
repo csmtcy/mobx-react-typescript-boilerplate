@@ -1,11 +1,11 @@
 interface Config {
-    host: string
+    host: string,
 }
 
 export default class Global {
 
     private static prodConfig = {
-        host: "https://api.bardox.co/v1/"
+        host: "https://api.bardox.co/v1/",
     } as Config;
 
     private static devConfig = {

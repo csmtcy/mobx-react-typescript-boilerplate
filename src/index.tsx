@@ -3,47 +3,11 @@ import * as ReactDOM from 'react-dom';
 import {observable} from 'mobx';
 import {observer} from 'mobx-react';
 import Global from './utils/global';
-import { Button } from 'antd-mobile';
 import Counter from './models/Counter';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Routes } from "./utils/routes";
 import "./i18n";
-import DevTools from 'mobx-react-devtools';
 Global.isDevelopment(require("./theme/main.scss")); // only require this when development mode, because of webpack-dev-server
-import { useTranslation, Trans } from "react-i18next";
-
-function AppRouter() {
-
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = lng => {
-    i18n.changeLanguage(lng);
-  };
-
-
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Button onClick={() => changeLanguage("en")}>English</Button>
-              <Button onClick={() => changeLanguage("cn")}>Chinese</Button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <Routes />
-      { Global.isDevelopment(<DevTools />) }
-    </Router>
-  );
-}
+import AppLayout from './components/appLayout'
 
 // @observer
 // class HomeScreen extends React.Component<{counter: Counter}, {}> {
@@ -69,7 +33,7 @@ function AppRouter() {
 // const counter = new Counter();
 
 
-ReactDOM.render(<AppRouter />, document.getElementById('root'));
+ReactDOM.render(<AppLayout />, document.getElementById('root'));
 
 
 /******
