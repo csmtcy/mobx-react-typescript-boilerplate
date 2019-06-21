@@ -24,11 +24,13 @@ Initial run:
 - ~~add local storage~~ // refer to ignite
 - ~~API request using axios~~
 - ~~Loading icon for certain area usage (https://github.com/danilowoz/react-content-loader)~~
+- ~~docker for production~~
+- ~~build files encoding problem maybe~~
 
 **Future TODO List**
 - local storage encryption (optional)
-- error message handling 
-- Loading screen 
+- error message handling
+- Loading screen
 - keep logged in data
 - add example
 
