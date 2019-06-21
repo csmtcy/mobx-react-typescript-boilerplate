@@ -22,11 +22,13 @@ Initial run:
 - ~~https://ant.design/docs/react/introduce as basic UI template~~
 - ~~I18n support~~
 - ~~add local storage~~ // refer to ignite
-- API request using axios maybe
+- ~~API request using axios~~
+- ~~Loading icon for certain area usage (https://github.com/danilowoz/react-content-loader)~~
+
+**Future TODO List**
 - local storage encryption (optional)
 - error message handling 
 - Loading screen 
-- Loading icon for certain area usage (https://github.com/danilowoz/react-content-loader)
 - keep logged in data
 - add example
 
