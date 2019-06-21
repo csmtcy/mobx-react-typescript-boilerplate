@@ -10,7 +10,9 @@ module.exports = merge(common, {
     compress: true,
     port: 3000,
     hot: true,
-    liveReload: true
+    liveReload: true,
+    publicPath: '/',
+    historyApiFallback: true,
   },
   output: {
     filename: '[name].bundle.js',

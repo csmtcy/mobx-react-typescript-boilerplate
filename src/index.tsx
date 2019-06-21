@@ -3,34 +3,73 @@ import * as ReactDOM from 'react-dom';
 import {observable} from 'mobx';
 import {observer} from 'mobx-react';
 import Global from './utils/global';
-import DevTools from 'mobx-react-devtools';
 import { Button } from 'antd-mobile';
-import Counter from './stores/Counter';
-
+import Counter from './models/Counter';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Routes } from "./utils/routes";
+import "./i18n";
+import DevTools from 'mobx-react-devtools';
 Global.isDevelopment(require("./theme/main.scss")); // only require this when development mode, because of webpack-dev-server
+import { useTranslation, Trans } from "react-i18next";
 
-@observer
-class TimerView extends React.Component<{counter: Counter}, {}> {
-    render() {
-        return (
-            <div>
-                <Button onClick={this.onReset}>
-                    Seconds passed: {this.props.counter.timer}
-                </Button>
-                {
-                    Global.isDevelopment(<DevTools />)
-                }
-            </div>
-        );
-     }
+function AppRouter() {
 
-     onReset = () => {
-         this.props.counter.resetTimer();
-     }
-};
+  const { t, i18n } = useTranslation();
 
-const counter = new Counter();
-ReactDOM.render(<TimerView counter={counter} />, document.getElementById('root'));
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
+
+
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Button onClick={() => changeLanguage("en")}>English</Button>
+              <Button onClick={() => changeLanguage("cn")}>Chinese</Button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <Routes />
+      { Global.isDevelopment(<DevTools />) }
+    </Router>
+  );
+}
+
+// @observer
+// class HomeScreen extends React.Component<{counter: Counter}, {}> {
+//     render() {
+//         return (
+//             <div>
+//                 <Button onClick={this.onReset}>
+//                     Seconds passed: {this.props.counter.timer}
+//                 </Button>
+//                 {
+//                     Global.isDevelopment(<DevTools />)
+//                 }
+//             </div>
+//         );
+//      }
+
+//      onReset = () => {
+//          this.props.counter.resetTimer();
+//      }
+// };
+
+
+// const counter = new Counter();
+
+
+ReactDOM.render(<AppRouter />, document.getElementById('root'));
 
 
 /******
